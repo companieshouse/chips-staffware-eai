@@ -1,0 +1,8 @@
+jms.queueConnectionFactoryName=${JMS_QUEUECONNECTIONFACTORYNAME}
+jms.staffwareQueue=${JMS_STAFFWAREQUEUE}
+jms.timeout=${JMS_TIMEOUT}
+jms.aq.eai.connection=${JMS_AQ_EAI_CONNECTION}
+jms.aq.eai.queueName=${JMS_AQ_EAI_QUEUENAME}
+jms.aq.eai.user=${JMS_AQ_EAI_USER}
+jms.aq.eai.password=${JMS_AQ_EAI_PASSWORD}
+jms.aq.eai.retryDelay=${JMS_AQ_EAI_RETRYDELAY}

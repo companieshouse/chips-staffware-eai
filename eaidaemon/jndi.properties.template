@@ -1,0 +1,4 @@
+java.naming.factory.initial=weblogic.jndi.WLInitialContextFactory
+java.naming.provider.url=t3://${HOST_SERVER}
+java.naming.security.principal=weblogic
+java.naming.security.credentials=${ADMIN_PASSWORD}
