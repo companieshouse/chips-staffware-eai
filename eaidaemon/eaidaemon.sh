@@ -7,7 +7,7 @@ timestamp() {
   done
 }
 
-export CLASSPATH=/eai:/eai/libs/aqapi12.jar:/eai/libs/aqbridge.jar:/eai/libs/ojdbc8.jar:/eai/libs/log4j.jar:/eai/libs/wlthint3client.jar
+export CLASSPATH=/eai:/eai/libs/aqapi12.jar:/eai/libs/aqbridge.jar:/eai/libs/ojdbc11.jar:/eai/libs/log4j.jar:/eai/libs/wlthint3client.jar
 
 # Set the vars in the jndi.properties and jms.properties files
 envsubst < jndi.properties.template > jndi.properties
@@ -19,7 +19,7 @@ LOG_FILE="${LOGS_DIR}/${HOSTNAME}-eaidaemon-$(date +'%Y-%m-%d_%H-%M-%S').log"
 
 while :
 do
-  /usr/java/jdk-8/bin/java -d64 -classpath $CLASSPATH uk.gov.ch.chips.server.aqbridge.StaffwareEAIBridge
+  /usr/java/jdk/bin/java -classpath $CLASSPATH uk.gov.ch.chips.server.aqbridge.StaffwareEAIBridge
 
   echo "========================="
   echo "EAI Daemon Exited >>>  on ${HOST_SERVER} "
