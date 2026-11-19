@@ -1,5 +1,5 @@
 # Pipeline validation change
-FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-serverjre:2.0.0 AS builder
+FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-serverjre:2.0.9 AS builder
 
 ARG ARTIFACTORY_URL
 ARG ARTIFACTORY_USERNAME
@@ -26,7 +26,7 @@ RUN mkdir -p ${EAI_HOME}/libs && \
     curl -L -u "${ARTIFACTORY_USERNAME}:${ARTIFACTORY_PASSWORD}" ${ARTIFACTORY_BASE_URL}/com/oracle/weblogic/wlthint3client/14.1.2.0/wlthint3client-14.1.2.0.jar -o wlthint3client.jar && \
     chmod 500 ${EAI_HOME}/*.sh
 
-FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-serverjre:2.0.0
+FROM 300288021642.dkr.ecr.eu-west-2.amazonaws.com/ch-serverjre:2.0.9
 
 ENV EAI_HOME=/eai
 
